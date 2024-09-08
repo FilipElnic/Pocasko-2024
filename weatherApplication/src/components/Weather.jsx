@@ -15,8 +15,9 @@ function Weather() {
       return;
     }
     try {
-      const url = `https://api.openweathermap.org/data/2.5/
-      weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${
+        import.meta.env.VITE_APP_ID
+      }`;
 
       const response = await fetch(url);
       const data = await response.json();
@@ -41,7 +42,7 @@ function Weather() {
   };
 
   useEffect(() => {
-    search("London");
+    search("Prague");
   }, []);
 
   return (
@@ -69,14 +70,14 @@ function Weather() {
               <img src={humidityIcon} />
               <div>
                 <p>{weatherData.humidity} %</p>
-                <span>Humidity</span>
+                <span>Vlhkost</span>
               </div>
             </div>
             <div className="col">
               <img src={windIcon} />
               <div>
                 <p>{weatherData.wind} Km/h</p>
-                <span>Wind speed</span>
+                <span>Rychlost větru</span>
               </div>
             </div>
           </div>
