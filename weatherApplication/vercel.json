@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Pocasko-2024/weatherApplication/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "Pocasko-2024/weatherApplication/dist"
+      }
+    }
+  ]
+}
