@@ -1,5 +1,18 @@
 {
-  "scripts": {
-    "build": "[vite] build --output public"
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "weatherApplication/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "weatherApplication/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
